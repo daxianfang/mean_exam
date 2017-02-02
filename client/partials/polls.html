@@ -1,0 +1,26 @@
+<a href="#!/create">Create a New Poll</a>
+<a href="#" ng-click='pc.logout()'>Logout</a>
+
+<H2>Current Polls:</H2>
+
+<input type="text" >
+
+<table>
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Survey Question</th>
+			<th>Date Posted</th>
+			<th>Action</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat='poll in pc.polls'>
+			<td>{{ poll.user }}</td>
+			<td><a href="#!/poll/{{poll._id}}">{{ poll.question }}</a></td>
+			<td>{{poll.createdAt}}</td>
+			<td><a href="#" ng-click='pc.deletePoll(poll._id)' ng-if='poll.user == self.poll.user'>Delete</a></td>
+		</tr>
+	</tbody>
+</table>
+

@@ -1,0 +1,30 @@
+<form class="form-horizontal" ng-submit='userCtrl.login()'>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">Email: </label>
+		<div class="col-sm-4">
+			<input type="text" name="email" class="form-control" ng-model='userCtrl.logUser.email'>
+		</div>
+	</div>
+<!-- 	<div class="form-group">
+		<label class="col-sm-2 control-label"></label>
+		<div class="col-sm-4">
+			<p ng-if='!userCtrl.logUser.email'>Email can not be empty!</p>
+		</div>
+	</div> -->
+	<div class="form-group">
+		<label class="col-sm-2 control-label">Password: </label>
+		<div class="col-sm-4">
+			<input type="password" name="password" class="form-control" ng-model='userCtrl.logUser.password'>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-4">
+			<input type="submit" class="btn btn-default" value="Login">
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-4">
+			<a href="#!/register">Don't have an account? Click here to register!</a>
+		</div>
+	</div>
+</form>
